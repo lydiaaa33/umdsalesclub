@@ -1,283 +1,337 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Events - UMD Sales Club</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-container": "#ff7b7f",
-                    "inverse-surface": "#3b2d2d",
-                    "surface-bright": "#fff8f7",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed": "#ffdf92",
-                    "on-error-container": "#93000a",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "on-primary": "#ffffff",
-                    "surface-container-low": "#fff0ef",
-                    "primary": "#8b0000", /* UMD Maroon */
-                    "primary-fixed": "#ffdad9",
-                    "error-container": "#ffdad6",
-                    "secondary-container": "#ffcc33", /* UMD Gold */
-                    "on-background": "#251818",
-                    "on-tertiary-fixed-variant": "#174b6a",
-                    "surface-container-highest": "#f5dddc",
-                    "surface-tint": "#ae2e39",
-                    "surface-container-high": "#fbe3e2",
-                    "outline-variant": "#e0bfbe",
-                    "outline": "#8c7070",
-                    "tertiary-container": "#003e5c",
-                    "on-surface": "#251818",
-                    "inverse-primary": "#ffb3b2",
-                    "primary-container": "#8b0000",
-                    "on-secondary-container": "#332b00",
-                    "error": "#ba1a1a",
-                    "tertiary-fixed-dim": "#9eccf0",
-                    "on-surface-variant": "#584141",
-                    "on-secondary-fixed": "#241a00",
-                    "surface-variant": "#f5dddc",
-                    "surface-container": "#ffe9e8",
-                    "tertiary": "#00273c",
-                    "inverse-on-surface": "#ffedec",
-                    "primary-fixed-dim": "#ffb3b2",
-                    "tertiary-fixed": "#c9e6ff",
-                    "on-tertiary-container": "#7ba9cc",
-                    "on-secondary-fixed-variant": "#594400",
-                    "on-primary-fixed-variant": "#8d1324",
-                    "surface-dim": "#ecd5d4",
-                    "secondary": "#ffcc33",
-                    "secondary-fixed-dim": "#f2c025",
-                    "background": "#fff8f7",
-                    "surface": "#fff8f7",
-                    "on-error": "#ffffff",
-                    "on-tertiary-fixed": "#001e2f",
-                    "on-primary-fixed": "#410009"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Events - UMD Sales Club</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-container": "#ff7b7f",
+            "inverse-surface": "#3b2d2d",
+            "surface-bright": "#fff8f7",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#ffdf92",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#fff0ef",
+            "primary": "#8b0000", /* UMD Maroon */
+            "primary-fixed": "#ffdad9",
+            "error-container": "#ffdad6",
+            "secondary-container": "#ffcc33", /* UMD Gold */
+            "on-background": "#251818",
+            "on-tertiary-fixed-variant": "#174b6a",
+            "surface-container-highest": "#f5dddc",
+            "surface-tint": "#ae2e39",
+            "surface-container-high": "#fbe3e2",
+            "outline-variant": "#e0bfbe",
+            "outline": "#8c7070",
+            "tertiary-container": "#003e5c",
+            "on-surface": "#251818",
+            "inverse-primary": "#ffb3b2",
+            "primary-container": "#8b0000",
+            "on-secondary-container": "#332b00",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#9eccf0",
+            "on-surface-variant": "#584141",
+            "on-secondary-fixed": "#241a00",
+            "surface-variant": "#f5dddc",
+            "surface-container": "#ffe9e8",
+            "tertiary": "#00273c",
+            "inverse-on-surface": "#ffedec",
+            "primary-fixed-dim": "#ffb3b2",
+            "tertiary-fixed": "#c9e6ff",
+            "on-tertiary-container": "#7ba9cc",
+            "on-secondary-fixed-variant": "#594400",
+            "on-primary-fixed-variant": "#8d1324",
+            "surface-dim": "#ecd5d4",
+            "secondary": "#ffcc33",
+            "secondary-fixed-dim": "#f2c025",
+            "background": "#fff8f7",
+            "surface": "#fff8f7",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#001e2f",
+            "on-primary-fixed": "#410009"
           },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          }
         },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body { font-family: 'Manrope', sans-serif; }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 </head>
+
 <body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-3">
-<img alt="UMD Sales Club Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ughukBojUmNlLhmNj7r-zdAGBL_S1GpDl_b7kSmRtBgqucuHcNUFq45Ls426unSzPK4WL-p38gLeJAM804Lz3p9NG8RLR2L_KKiiphVdDa4fmmzBwRQTX7nZL_bzgcsRE5awMgt413gWplGLCaSvWYAu4IpflYPrigLCn9ciDHd-1jnBIEoR-hqQA1gLGpvQj9zGk-IsEPPfcGkvnFGJKldBDD7tmrcmMUXjQyhUaqKucON8co7jVIko3mUMiODQu-2OKfPDrc8"/>
-<span class="text-xl font-extrabold tracking-tighter text-[#8b0000] dark:text-[#ffcc33]">UMD Sales Club</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out" href="index.html">Home</a>
-<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#8b0000] dark:text-[#ffcc33] font-bold border-b-2 border-[#8b0000] dark:border-[#ffcc33] pb-1 transition-all duration-300 ease-in-out" href="events.html">Events</a>
-<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out" href="leadership.html">Leadership</a>
-<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out" href="news.html">News</a>
-<a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out" href="registration.html">Sales Summit</a>
-</div>
-<button class="bg-primary-container text-white px-6 py-2 text-sm font-bold rounded-lg hover:opacity-80 active:scale-95 transition-all duration-300 ease-in-out">
-            Join Now
-        </button>
-</div>
-</nav>
-<main class="pt-24 pb-20">
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 mb-16">
-<div class="relative overflow-hidden rounded-xl bg-primary-container py-20 px-12 text-white">
-<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary-container to-transparent opacity-60"></div>
-<div class="relative z-10 flex flex-col items-start max-w-2xl">
-<span class="font-bold uppercase tracking-[0.2em] text-secondary-container text-xs mb-4">University of Minnesota Duluth</span>
-<h1 class="text-6xl font-extrabold tracking-tighter mb-6 leading-none">Events</h1>
-<p class="text-lg text-white/80 font-medium leading-relaxed mb-8">
-                    Developing the next generation of sales leaders at UMD through industry engagement, high-stakes competitions, and expert-led workshops.
-                </p>
-</div>
-<!-- Decorative element -->
-<div class="absolute right-0 top-0 h-full w-1/3 bg-cover bg-center mix-blend-overlay opacity-40 grayscale" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNYgBelCp0rhupb1COzVvdCso0q0NtyGpFlVFINzWhWtbl1t2nNZxP3pYmbMAXBTL4QlOE1wH8bKf-VE836BnkomXPwf1gWpeeX7dN4LpxG-6tEaQM22JlJ80Y07jCLMpYScqU1AT-yLzQ-dZtceUhnxuPyAP3i4qSzY2sYDFlTjgNFq0iHnvgk_xOn0vuC6IBU_-tOOZtN_7rr9tEI4Z3QBy-jDdPCiEHl1PegJnCN7msuuspMErUJBlXa8R3z92cmZ8xTkvI2w')"></div>
-</div>
-</section>
-<!-- Featured Event: Sales Summit -->
-<section class="max-w-7xl mx-auto px-8 mb-20">
-<div class="flex flex-col lg:flex-row gap-8 items-stretch">
-<div class="w-full lg:w-2/3 relative group rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
-<img alt="Sales Summit Event Hall" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTOQvsI9CpE8QpX_MhETrFxyJPUO4hl10GckObCsaoVbsoBFqp54ufu5mWGLdWA5_fvEYVjEDsqYz1nTvdF0ox9iH_AfsFt1PZVNkEJp8Htb5LuOUzA7lghCX4ywPvO_4cDt7nJJBRASqvOm1iqHN9epOBzvzIolZpkIalRei6zc-fQBZAikvzS6rSnFULbktQe1PDmsNnq0ZIIhd9aQ4c_i3TcQoXVwmlyOPCHRZQD-loR5izhuOJkh15F2hhEBkjtR8xO2Dhg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10">
-<div class="flex gap-2 mb-4">
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Flagship Event</span>
-<span class="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Spring 2024</span>
-</div>
-<h2 class="text-4xl font-bold text-white mb-2 tracking-tight">UMD Sales Summit 2024</h2>
-<p class="text-white/70 max-w-xl mb-6">Our premier annual event connecting Duluth's top sales talent with regional and national industry leaders. A full day of competition and networking.</p>
-<div class="flex items-center gap-4">
-<button class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-lg font-bold text-sm flex items-center gap-2 hover:opacity-90 transition-opacity">
-                            Register Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="w-full lg:w-1/3 flex flex-col justify-between bg-surface-container-low p-10 rounded-xl">
-<div>
-<span class="block font-bold text-[#8b0000] text-5xl mb-2 tracking-tighter">40+</span>
-<p class="text-on-surface-variant font-bold text-xs uppercase tracking-[0.15em] mb-8">Partner Companies</p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="bg-primary-container/10 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary-container">groups</span>
-</div>
-<div>
-<h4 class="font-bold text-on-surface">Employer Recruitment</h4>
-<p class="text-sm text-on-surface-variant">Connect with recruiters looking for Duluth talent.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="bg-primary-container/10 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary-container">psychology</span>
-</div>
-<div>
-<h4 class="font-bold text-on-surface">Pro Development</h4>
-<p class="text-sm text-on-surface-variant">Participate in role-play workshops led by experts.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="pt-8 border-t border-outline-variant/20">
-<p class="text-xs text-on-surface-variant font-medium">Registration details coming soon for students and sponsors.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Upcoming Events Bento Grid -->
-<section class="max-w-7xl mx-auto px-8 mb-20">
-<div class="flex justify-between items-end mb-10">
-<div>
-<span class="font-bold text-secondary-container uppercase tracking-widest text-xs">Curated Schedule</span>
-<h3 class="text-3xl font-bold tracking-tight mt-1">Club Engagements</h3>
-</div>
-<a class="text-primary-container font-bold text-sm flex items-center gap-2 hover:underline" href="#">
-                View Calendar <span class="material-symbols-outlined text-sm">calendar_month</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Tech Sales Panel -->
-<div class="md:col-span-2 group bg-surface-container-highest p-8 rounded-xl flex flex-col md:flex-row gap-8 transition-all hover:bg-surface-container-high border border-outline-variant/10">
-<div class="w-full md:w-2/5 overflow-hidden rounded-lg">
-<img alt="Tech Panel Discussion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoakT6mEFtvzTY2j82VP-hD0Q6RJwxlnQAnVQKrvhki-YdWHUir-4k2YXC9Gp5Ozv7UZICTDAAjdP9bnItPsOoX1OoZ8kwHqhDWFdhH9VdtYp1yhxrYKTpA3-ING67PU5HrnMxNDihYzCOlAXWU8ybGjOL5V0gsRlYJ7JKxU_4PT_Q3_UzCuDvgQCxP_JSTHLkuL0RUQtaTGnEX96c8g9roThda60evmNH-C6SNlwSnDTcqJC9LkafDmQNE3x4SuHvofmKMJQvLQ"/>
-</div>
-<div class="w-full md:w-3/5 flex flex-col justify-center">
-<div class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-extrabold uppercase px-2 py-0.5 w-fit rounded mb-4">Panel Discussion</div>
-<h4 class="text-2xl font-bold mb-3">Tech Sales Panel</h4>
-<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Hear from UMD alumni working in major tech hubs about the transition from classroom to corporate software sales.</p>
-<div class="flex items-center gap-6 text-xs font-bold text-on-surface">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-lg">event</span>
-                            Oct 24, 6:00 PM
-                        </div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-container text-lg">location_on</span>
-                            LSBE Room 235
-                        </div>
-</div>
-</div>
-</div>
-<!-- Weekly Meetings -->
-<div class="bg-primary-container text-white p-8 rounded-xl flex flex-col justify-between">
-<div>
-<div class="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-<span class="material-symbols-outlined">schedule</span>
-</div>
-<h4 class="text-xl font-bold mb-2">Weekly Meetings</h4>
-<p class="text-white/70 text-sm mb-6">Join us every Wednesday to sharpen your skills and build your network.</p>
-</div>
-<div>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-3 text-xs">
-<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            Pitch Practice Sessions
-                        </li>
-<li class="flex items-center gap-3 text-xs">
-<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            LinkedIn Optimization
-                        </li>
-</ul>
-<button class="w-full py-3 bg-white/10 hover:bg-white/20 transition-colors border border-white/20 rounded-lg text-xs font-bold uppercase tracking-widest">
-                        Add to iCal
-                    </button>
-</div>
-</div>
-<!-- Mock Competition -->
-<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
-<div class="mb-6">
-<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Nov 12</span>
-<h4 class="text-lg font-bold mt-1">Role-Play Competition</h4>
-</div>
-<p class="text-sm text-on-surface-variant mb-8">Test your negotiation tactics in a mock business-to-business sales environment with guest judges.</p>
-<div class="flex -space-x-2">
-<img alt="Student Competitor" class="w-8 h-8 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp94k1ul0okzZDhKNguW6agRrQy5eP917WQNJOsoQA56nTzHjIcnAo-TEIlw1juPDDSgE1IeS2yes2CMibSyle5gH_CMy1_r67LBcCQc0BRNB6PdLycUFAf-s04kxqw-7WM0fQNIF3JLc0zzu44ZQUcJPtmulosicax7mkMyZa37K0XTYKvx_GjZcmopUu7de9HO1gsuiwt1d-TAfRlTFym9y136Kmw9mlxaeY1qCQNbLKKUnZEiPAWpHcv6gTcwZZfzz37Y6QrQ"/>
-<img alt="Student Competitor" class="w-8 h-8 rounded-full border-2 border-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCbSVu006emCuFXtk9oTY8y4N79HJ8cI-6ij_RPnR3u8Nj8bigV6fSMtuAPYRnZdyVh32bMf--REvUuH1iZGIyMyMBGz20vYoCFzti16uw3a_vQjP1pGY7e-855NMqTAJrj96CSsGc6_MNvdTZDFMScDchm7FsiwVVWRD6iJ_9s98xAxz2a_STX6VoK0P3Z5BwK6JiAeXSRjVTdDmv9_lncAYfUIF0hMVHkObb9Rz7-KLfKVfyvVo-I6CEts3ofhpixzmpTh6osA"/>
-<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-on-secondary-container border-2 border-surface">+8</div>
-</div>
-</div>
-<!-- Executive Dinner -->
-<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
-<div class="mb-6">
-<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Nov 18</span>
-<h4 class="text-lg font-bold mt-1">Duluth Alumni Dinner</h4>
-</div>
-<p class="text-sm text-on-surface-variant mb-8">An intimate networking dinner with Labovitz School alumni who are leaders in the sales field.</p>
-<div class="text-xs font-bold text-primary-container">Invite Only</div>
-</div>
-<!-- Career Fair -->
-<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
-<div class="mb-6">
-<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Dec 04</span>
-<h4 class="text-lg font-bold mt-1">Local Business Mixer</h4>
-</div>
-<p class="text-sm text-on-surface-variant mb-8">Network with representatives from leading Northland businesses and Duluth-based firms.</p>
-<button class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-70">
-                    View Details <span class="material-symbols-outlined text-xs">open_in_new</span>
-</button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-12 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
-<div class="flex items-center gap-4">
-<img alt="UMD Sales Club Logo" class="h-6 w-auto grayscale opacity-60" src="https://lh3.googleusercontent.com/aida/ADBb0ughukBojUmNlLhmNj7r-zdAGBL_S1GpDl_b7kSmRtBgqucuHcNUFq45Ls426unSzPK4WL-p38gLeJAM804Lz3p9NG8RLR2L_KKiiphVdDa4fmmzBwRQTX7nZL_bzgcsRE5awMgt413gWplGLCaSvWYAu4IpflYPrigLCn9ciDHd-1jnBIEoR-hqQA1gLGpvQj9zGk-IsEPPfcGkvnFGJKldBDD7tmrcmMUXjQyhUaqKucON8co7jVIko3mUMiODQu-2OKfPDrc8"/>
-<span class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500">
-                © 2024 UMD Sales Club. University of Minnesota Duluth.
-            </span>
-</div>
-<div class="flex gap-8">
-<a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors" href="#">Privacy</a>
-<a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors" href="#">Terms</a>
-<a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors" href="#">LinkedIn</a>
-<a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors" href="#">Instagram</a>
-</div>
-</div>
-</footer>
-</body></html>
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <div class="flex items-center gap-3">
+        <img alt="UMD Sales Club Logo" class="h-10 w-auto object-contain" src="SalesClubLogo.jpg" />
+        <span class="text-xl font-extrabold tracking-tighter text-[#8b0000] dark:text-[#ffcc33]">UMD Sales Club</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out"
+          href="index.html">Home</a>
+        <a class="font-['Manrope'] font-semibold tracking-tight text-sm text-[#8b0000] dark:text-[#ffcc33] font-bold border-b-2 border-[#8b0000] dark:border-[#ffcc33] pb-1 transition-all duration-300 ease-in-out"
+          href="events.html">Events</a>
+        <a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out"
+          href="leadership.html">Leadership</a>
+        <a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out"
+          href="news.html">News</a>
+        <a class="font-['Manrope'] font-semibold tracking-tight text-sm text-stone-600 dark:text-stone-400 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-all duration-300 ease-in-out"
+          href="registration.html">Sales Summit</a>
+      </div>
+      <button
+        class="bg-primary-container text-white px-6 py-2 text-sm font-bold rounded-lg hover:opacity-80 active:scale-95 transition-all duration-300 ease-in-out">
+        Join Now
+      </button>
+    </div>
+  </nav>
+  <main class="pt-24 pb-20">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-16">
+      <div class="relative overflow-hidden rounded-xl bg-primary-container py-20 px-12 text-white">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary-container to-transparent opacity-60">
+        </div>
+        <div class="relative z-10 flex flex-col items-start max-w-2xl">
+          <span class="font-bold uppercase tracking-[0.2em] text-secondary-container text-xs mb-4">University of
+            Minnesota Duluth</span>
+          <h1 class="text-6xl font-extrabold tracking-tighter mb-6 leading-none">Events</h1>
+          <p class="text-lg text-white/80 font-medium leading-relaxed mb-8">
+            Developing the next generation of sales leaders at UMD through industry engagement, high-stakes
+            competitions, and expert-led workshops.
+          </p>
+        </div>
+        <!-- Decorative element -->
+        <div class="absolute right-0 top-0 h-full w-1/3 bg-cover bg-center mix-blend-overlay opacity-40 grayscale"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNYgBelCp0rhupb1COzVvdCso0q0NtyGpFlVFINzWhWtbl1t2nNZxP3pYmbMAXBTL4QlOE1wH8bKf-VE836BnkomXPwf1gWpeeX7dN4LpxG-6tEaQM22JlJ80Y07jCLMpYScqU1AT-yLzQ-dZtceUhnxuPyAP3i4qSzY2sYDFlTjgNFq0iHnvgk_xOn0vuC6IBU_-tOOZtN_7rr9tEI4Z3QBy-jDdPCiEHl1PegJnCN7msuuspMErUJBlXa8R3z92cmZ8xTkvI2w')">
+        </div>
+      </div>
+    </section>
+    <!-- Featured Event: Sales Summit -->
+    <section class="max-w-7xl mx-auto px-8 mb-20">
+      <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+        <div
+          class="w-full lg:w-2/3 relative group rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.01]">
+          <img alt="Sales Summit Event Hall" class="w-full h-[500px] object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTOQvsI9CpE8QpX_MhETrFxyJPUO4hl10GckObCsaoVbsoBFqp54ufu5mWGLdWA5_fvEYVjEDsqYz1nTvdF0ox9iH_AfsFt1PZVNkEJp8Htb5LuOUzA7lghCX4ywPvO_4cDt7nJJBRASqvOm1iqHN9epOBzvzIolZpkIalRei6zc-fQBZAikvzS6rSnFULbktQe1PDmsNnq0ZIIhd9aQ4c_i3TcQoXVwmlyOPCHRZQD-loR5izhuOJkh15F2hhEBkjtR8xO2Dhg" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10">
+            <div class="flex gap-2 mb-4">
+              <span
+                class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Flagship
+                Event</span>
+              <span
+                class="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Spring
+                2024</span>
+            </div>
+            <h2 class="text-4xl font-bold text-white mb-2 tracking-tight">UMD Sales Summit 2024</h2>
+            <p class="text-white/70 max-w-xl mb-6">Our premier annual event connecting Duluth's top sales talent with
+              regional and national industry leaders. A full day of competition and networking.</p>
+            <div class="flex items-center gap-4">
+              <button
+                class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-lg font-bold text-sm flex items-center gap-2 hover:opacity-90 transition-opacity">
+                Register Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/3 flex flex-col justify-between bg-surface-container-low p-10 rounded-xl">
+          <div>
+            <span class="block font-bold text-[#8b0000] text-5xl mb-2 tracking-tighter">40+</span>
+            <p class="text-on-surface-variant font-bold text-xs uppercase tracking-[0.15em] mb-8">Partner Companies</p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-container/10 p-2 rounded-lg">
+                  <span class="material-symbols-outlined text-primary-container">groups</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Employer Recruitment</h4>
+                  <p class="text-sm text-on-surface-variant">Connect with recruiters looking for Duluth talent.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="bg-primary-container/10 p-2 rounded-lg">
+                  <span class="material-symbols-outlined text-primary-container">psychology</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Pro Development</h4>
+                  <p class="text-sm text-on-surface-variant">Participate in role-play workshops led by experts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-outline-variant/20">
+            <p class="text-xs text-on-surface-variant font-medium">Registration details coming soon for students and
+              sponsors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Upcoming Events Bento Grid -->
+    <section class="max-w-7xl mx-auto px-8 mb-20">
+      <div class="flex justify-between items-end mb-10">
+        <div>
+          <span class="font-bold text-secondary-container uppercase tracking-widest text-xs">Curated Schedule</span>
+          <h3 class="text-3xl font-bold tracking-tight mt-1">Club Engagements</h3>
+        </div>
+        <a class="text-primary-container font-bold text-sm flex items-center gap-2 hover:underline" href="#">
+          View Calendar <span class="material-symbols-outlined text-sm">calendar_month</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tech Sales Panel -->
+        <div
+          class="md:col-span-2 group bg-surface-container-highest p-8 rounded-xl flex flex-col md:flex-row gap-8 transition-all hover:bg-surface-container-high border border-outline-variant/10">
+          <div class="w-full md:w-2/5 overflow-hidden rounded-lg">
+            <img alt="Tech Panel Discussion"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoakT6mEFtvzTY2j82VP-hD0Q6RJwxlnQAnVQKrvhki-YdWHUir-4k2YXC9Gp5Ozv7UZICTDAAjdP9bnItPsOoX1OoZ8kwHqhDWFdhH9VdtYp1yhxrYKTpA3-ING67PU5HrnMxNDihYzCOlAXWU8ybGjOL5V0gsRlYJ7JKxU_4PT_Q3_UzCuDvgQCxP_JSTHLkuL0RUQtaTGnEX96c8g9roThda60evmNH-C6SNlwSnDTcqJC9LkafDmQNE3x4SuHvofmKMJQvLQ" />
+          </div>
+          <div class="w-full md:w-3/5 flex flex-col justify-center">
+            <div
+              class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-extrabold uppercase px-2 py-0.5 w-fit rounded mb-4">
+              Panel Discussion</div>
+            <h4 class="text-2xl font-bold mb-3">Tech Sales Panel</h4>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Hear from UMD alumni working in major tech
+              hubs about the transition from classroom to corporate software sales.</p>
+            <div class="flex items-center gap-6 text-xs font-bold text-on-surface">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary-container text-lg">event</span>
+                Oct 24, 6:00 PM
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary-container text-lg">location_on</span>
+                LSBE Room 235
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Weekly Meetings -->
+        <div class="bg-primary-container text-white p-8 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Weekly Meetings</h4>
+            <p class="text-white/70 text-sm mb-6">Join us every Wednesday to sharpen your skills and build your network.
+            </p>
+          </div>
+          <div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-xs">
+                <span class="material-symbols-outlined text-secondary-container text-sm"
+                  style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Pitch Practice Sessions
+              </li>
+              <li class="flex items-center gap-3 text-xs">
+                <span class="material-symbols-outlined text-secondary-container text-sm"
+                  style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                LinkedIn Optimization
+              </li>
+            </ul>
+            <button
+              class="w-full py-3 bg-white/10 hover:bg-white/20 transition-colors border border-white/20 rounded-lg text-xs font-bold uppercase tracking-widest">
+              Add to iCal
+            </button>
+          </div>
+        </div>
+        <!-- Mock Competition -->
+        <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+          <div class="mb-6">
+            <span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Nov 12</span>
+            <h4 class="text-lg font-bold mt-1">Role-Play Competition</h4>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-8">Test your negotiation tactics in a mock business-to-business
+            sales environment with guest judges.</p>
+          <div class="flex -space-x-2">
+            <img alt="Student Competitor" class="w-8 h-8 rounded-full border-2 border-surface"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp94k1ul0okzZDhKNguW6agRrQy5eP917WQNJOsoQA56nTzHjIcnAo-TEIlw1juPDDSgE1IeS2yes2CMibSyle5gH_CMy1_r67LBcCQc0BRNB6PdLycUFAf-s04kxqw-7WM0fQNIF3JLc0zzu44ZQUcJPtmulosicax7mkMyZa37K0XTYKvx_GjZcmopUu7de9HO1gsuiwt1d-TAfRlTFym9y136Kmw9mlxaeY1qCQNbLKKUnZEiPAWpHcv6gTcwZZfzz37Y6QrQ" />
+            <img alt="Student Competitor" class="w-8 h-8 rounded-full border-2 border-surface"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCbSVu006emCuFXtk9oTY8y4N79HJ8cI-6ij_RPnR3u8Nj8bigV6fSMtuAPYRnZdyVh32bMf--REvUuH1iZGIyMyMBGz20vYoCFzti16uw3a_vQjP1pGY7e-855NMqTAJrj96CSsGc6_MNvdTZDFMScDchm7FsiwVVWRD6iJ_9s98xAxz2a_STX6VoK0P3Z5BwK6JiAeXSRjVTdDmv9_lncAYfUIF0hMVHkObb9Rz7-KLfKVfyvVo-I6CEts3ofhpixzmpTh6osA" />
+            <div
+              class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-on-secondary-container border-2 border-surface">
+              +8</div>
+          </div>
+        </div>
+        <!-- Executive Dinner -->
+        <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+          <div class="mb-6">
+            <span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Nov 18</span>
+            <h4 class="text-lg font-bold mt-1">Duluth Alumni Dinner</h4>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-8">An intimate networking dinner with Labovitz School alumni who
+            are leaders in the sales field.</p>
+          <div class="text-xs font-bold text-primary-container">Invite Only</div>
+        </div>
+        <!-- Career Fair -->
+        <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+          <div class="mb-6">
+            <span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Dec 04</span>
+            <h4 class="text-lg font-bold mt-1">Local Business Mixer</h4>
+          </div>
+          <p class="text-sm text-on-surface-variant mb-8">Network with representatives from leading Northland businesses
+            and Duluth-based firms.</p>
+          <button class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-70">
+            View Details <span class="material-symbols-outlined text-xs">open_in_new</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+      <div class="flex items-center gap-4">
+        <img alt="UMD Sales Club Logo" class="h-6 w-auto grayscale opacity-60" src="SalesClubLogo.jpg" />
+        <span class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500">
+          © 2024 UMD Sales Club. University of Minnesota Duluth.
+        </span>
+      </div>
+      <div class="flex gap-8">
+        <a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors"
+          href="#">Privacy</a>
+        <a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors"
+          href="#">Terms</a>
+        <a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors"
+          href="#">LinkedIn</a>
+        <a class="font-['Manrope'] text-xs font-medium uppercase tracking-widest text-stone-500 dark:text-stone-500 hover:text-[#8b0000] dark:hover:text-[#ffcc33] transition-colors"
+          href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
