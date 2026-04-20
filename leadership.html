@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -75,16 +80,21 @@
             },
         }
     </script>
-<style>
-        body { font-family: 'Manrope', sans-serif; }
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .editorial-asymmetry {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 4rem;
         }
+
         @media (max-width: 768px) {
             .editorial-asymmetry {
                 grid-template-columns: 1fr;
@@ -93,176 +103,227 @@
         }
     </style>
 </head>
+
 <body class="bg-background text-on-background antialiased">
-<!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm border-b border-surface-variant/30">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-3">
-<img alt="The Boardroom Editorial Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ughukBojUmNlLhmNj7r-zdAGBL_S1GpDl_b7kSmRtBgqucuHcNUFq45Ls426unSzPK4WL-p38gLeJAM804Lz3p9NG8RLR2L_KKiiphVdDa4fmmzBwRQTX7nZL_bzgcsRE5awMgt413gWplGLCaSvWYAu4IpflYPrigLCn9ciDHd-1jnBIEoR-hqQA1gLGpvQj9zGk-IsEPPfcGkvnFGJKldBDD7tmrcmMUXjQyhUaqKucON8co7jVIko3mUMiODQu-2OKfPDrc8"/>
-<span class="text-xl font-extrabold tracking-tighter text-primary">The Boardroom Editorial</span>
-</div>
-<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight text-sm">
-<a class="text-stone-600 hover:text-primary transition-all duration-300" href="index.html">Home</a>
-<a class="text-stone-600 hover:text-primary transition-all duration-300" href="events.html">Events</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1" href="leadership.html">Leadership</a>
-<a class="text-stone-600 hover:text-primary transition-all duration-300" href="news.html">News</a>
-<a class="text-stone-600 hover:text-primary transition-all duration-300" href="registration.html">Sales Summit</a>
-</div>
-<button class="bg-primary text-white px-6 py-2 rounded-lg font-bold transition-all duration-300 ease-in-out hover:opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+    <!-- Top Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm border-b border-surface-variant/30">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="The Boardroom Editorial Logo" class="h-10 w-auto object-contain"
+                    src="SalesClubLogo.jpg" />
+                <span class="text-xl font-extrabold tracking-tighter text-primary">The Boardroom Editorial</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight text-sm">
+                <a class="text-stone-600 hover:text-primary transition-all duration-300" href="index.html">Home</a>
+                <a class="text-stone-600 hover:text-primary transition-all duration-300" href="events.html">Events</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1" href="leadership.html">Leadership</a>
+                <a class="text-stone-600 hover:text-primary transition-all duration-300" href="news.html">News</a>
+                <a class="text-stone-600 hover:text-primary transition-all duration-300" href="registration.html">Sales
+                    Summit</a>
+            </div>
+            <button
+                class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 ease-in-out hover:bg-opacity-90 scale-95 active:scale-90">
                 Join Now
             </button>
-</div>
-</nav>
-<main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
-<!-- Hero Section: Editorial Header -->
-<header class="editorial-asymmetry mb-24">
-<div>
-<span class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-primary bg-primary px-3 py-1 rounded-full inline-block mb-6">Executive Committee</span>
-<h1 class="text-7xl font-extrabold tracking-tighter text-primary leading-[0.9] mb-6">Leadership</h1>
-</div>
-<div class="flex items-end">
-<p class="text-xl text-on-surface-variant font-medium leading-relaxed max-w-xl border-l-2 border-secondary-container pl-8">
-                    Steered by a dedicated team of future sales leaders at the University of Minnesota Duluth. From strategy to corporate relations, our executive board bridges the gap between academic theory and professional mastery.
+        </div>
+    </nav>
+    <main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
+        <!-- Hero Section: Editorial Header -->
+        <header class="editorial-asymmetry mb-24">
+            <div>
+                <span
+                    class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-primary bg-primary px-3 py-1 rounded-full inline-block mb-6">Executive
+                    Committee</span>
+                <h1 class="text-7xl font-extrabold tracking-tighter text-primary leading-[0.9] mb-6">Leadership</h1>
+            </div>
+            <div class="flex items-end">
+                <p
+                    class="text-xl text-on-surface-variant font-medium leading-relaxed max-w-xl border-l-2 border-secondary-container pl-8">
+                    Steered by a dedicated team of future sales leaders at the University of Minnesota Duluth. From
+                    strategy to corporate relations, our executive board bridges the gap between academic theory and
+                    professional mastery.
                 </p>
-</div>
-</header>
-<!-- Featured Leadership -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-<!-- President -->
-<div class="md:col-span-2 bg-white p-10 rounded-2xl flex flex-col md:flex-row gap-10 items-center group transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 border border-surface-variant/50">
-<div class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden bg-surface-container-highest">
-<img alt="Jameson Vance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXaLOqoNneNS95h57phrrxM7bErXd9YaXn4MXn6gryGRBpYZgoMBKUR9OOEEawxo5eciwu4X6rofDTE1GwrLwQwr1Ot7xSOmDrb30Rd4_JlJkYpEYns10DM0ObYGDo-nA6Af_nQ0iXm5YiCDpxnho_P0KglrorsgSPIuq_htJqAdtjzi13CxlIXtR06ZT9REu11DM3d8zgs6wcJZYeEFUMpeItnDlZHO_IQQh7GITUd_i1XrXr-tHuaIQrcTo6eO7UIAX49nhrOg"/>
-</div>
-<div class="w-full md:w-1/2 space-y-5">
-<span class="text-primary font-bold tracking-widest text-[10px] uppercase bg-secondary-container/20 px-2 py-1 rounded">President &amp; Founder</span>
-<h3 class="text-5xl font-extrabold text-primary tracking-tight">Christian Dietz</h3>
-<p class="text-on-surface-variant leading-relaxed text-lg">President </p>
-<div class="pt-4 flex gap-4">
-<div class="p-2 rounded-full border border-surface-variant hover:bg-secondary-container/10 transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-primary">handshake</span>
-</div>
-<div class="p-2 rounded-full border border-surface-variant hover:bg-secondary-container/10 transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-primary">group</span>
-</div>
-</div>
-</div>
-</div>
-<!-- VP -->
-<div class="bg-primary p-10 rounded-2xl flex flex-col justify-between text-white overflow-hidden relative group">
-<div class="z-10">
-<span class="text-secondary-container font-bold tracking-widest text-[10px] uppercase">Vice President</span>
-<h3 class="text-4xl font-extrabold mt-4 leading-tight">Sarah Chen</h3>
-<p class="text-white/80 mt-4 font-medium">Head of Internal Operations and Recruitment Pipeline.</p>
-</div>
-<div class="mt-8 z-10 flex items-center gap-4">
-<img alt="Sarah Chen" class="w-20 h-20 rounded-full object-cover border-4 border-secondary-container shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_CaeWEQxnj-eu-2212gSxoxxoj9fNu8EVZlZbvTiRWhiI4-ZoBR3x3DcEPEeleTs3-W8gAXJYSA8Ec6RfdXAIHB5O92yOx8v0TbFbKYdB8zTl4cwIvl57paf8wnmYrdDq7WRlzQyf4m9O4aKUalYtu58wxMUz6mUif7z48kGJIzjbPYPVYotFapJ65vLZ81WV7cK9iKfjC2TUDYwhR5kTmK9RmHl1CBmEzUiNOge3OKfG209Q7EI1ZUwO4q1yAbWSImClHrHNw"/>
-<div class="flex flex-col">
-<span class="text-xs font-bold text-secondary-container">Class of 2025</span>
-<span class="text-[10px] uppercase tracking-wider opacity-60">Operations</span>
-</div>
-</div>
-<div class="absolute -right-12 -bottom-12 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">trending_up</span>
-</div>
-</div>
-</section>
-<!-- Executive Grid: Functional Roles -->
-<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div class="max-w-2xl">
-<h2 class="text-3xl font-extrabold text-primary mb-3 flex items-center gap-3">
-<span class="w-12 h-[2px] bg-secondary-container"></span>
+            </div>
+        </header>
+        <!-- Featured Leadership -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+            <!-- President -->
+            <div
+                class="md:col-span-2 bg-white p-10 rounded-2xl flex flex-col md:flex-row gap-10 items-center group transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 border border-surface-variant/50">
+                <div class="w-full md:w-1/2 aspect-square rounded-xl overflow-hidden bg-surface-container-highest">
+                    <img alt="Jameson Vance"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXaLOqoNneNS95h57phrrxM7bErXd9YaXn4MXn6gryGRBpYZgoMBKUR9OOEEawxo5eciwu4X6rofDTE1GwrLwQwr1Ot7xSOmDrb30Rd4_JlJkYpEYns10DM0ObYGDo-nA6Af_nQ0iXm5YiCDpxnho_P0KglrorsgSPIuq_htJqAdtjzi13CxlIXtR06ZT9REu11DM3d8zgs6wcJZYeEFUMpeItnDlZHO_IQQh7GITUd_i1XrXr-tHuaIQrcTo6eO7UIAX49nhrOg" />
+                </div>
+                <div class="w-full md:w-1/2 space-y-5">
+                    <span
+                        class="text-primary font-bold tracking-widest text-[10px] uppercase bg-secondary-container/20 px-2 py-1 rounded">President
+                        &amp; Founder</span>
+                    <h3 class="text-5xl font-extrabold text-primary tracking-tight">Christian Dietz</h3>
+                    <p class="text-on-surface-variant leading-relaxed text-lg">President </p>
+                    <div class="pt-4 flex gap-4">
+                        <div
+                            class="p-2 rounded-full border border-surface-variant hover:bg-secondary-container/10 transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary">handshake</span>
+                        </div>
+                        <div
+                            class="p-2 rounded-full border border-surface-variant hover:bg-secondary-container/10 transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary">group</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- VP -->
+            <div
+                class="bg-primary p-10 rounded-2xl flex flex-col justify-between text-white overflow-hidden relative group">
+                <div class="z-10">
+                    <span class="text-secondary-container font-bold tracking-widest text-[10px] uppercase">Vice
+                        President</span>
+                    <h3 class="text-4xl font-extrabold mt-4 leading-tight">Sarah Chen</h3>
+                    <p class="text-white/80 mt-4 font-medium">Head of Internal Operations and Recruitment Pipeline.</p>
+                </div>
+                <div class="mt-8 z-10 flex items-center gap-4">
+                    <img alt="Sarah Chen"
+                        class="w-20 h-20 rounded-full object-cover border-4 border-secondary-container shadow-xl"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX_CaeWEQxnj-eu-2212gSxoxxoj9fNu8EVZlZbvTiRWhiI4-ZoBR3x3DcEPEeleTs3-W8gAXJYSA8Ec6RfdXAIHB5O92yOx8v0TbFbKYdB8zTl4cwIvl57paf8wnmYrdDq7WRlzQyf4m9O4aKUalYtu58wxMUz6mUif7z48kGJIzjbPYPVYotFapJ65vLZ81WV7cK9iKfjC2TUDYwhR5kTmK9RmHl1CBmEzUiNOge3OKfG209Q7EI1ZUwO4q1yAbWSImClHrHNw" />
+                    <div class="flex flex-col">
+                        <span class="text-xs font-bold text-secondary-container">Class of 2025</span>
+                        <span class="text-[10px] uppercase tracking-wider opacity-60">Operations</span>
+                    </div>
+                </div>
+                <div class="absolute -right-12 -bottom-12 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <span class="material-symbols-outlined text-[200px]"
+                        style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                </div>
+            </div>
+        </section>
+        <!-- Executive Grid: Functional Roles -->
+        <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="max-w-2xl">
+                <h2 class="text-3xl font-extrabold text-primary mb-3 flex items-center gap-3">
+                    <span class="w-12 h-[2px] bg-secondary-container"></span>
                     Operations Board
                 </h2>
-<p class="text-on-surface-variant font-medium pl-16">The functional architects behind our weekly sales workshops and national competitions at UMD.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Team Member 1 -->
-<div class="group cursor-pointer">
-<div class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
-<img alt="Marcus Thorne" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqgRnjRtFMG2aD7Pk8gcyjB1DFjS6m_x73EoM7afG03q_OnxxqGZXT1QemCb0uqPRQ7acslU6dz2lVZUh0gsc3FccdEeT6WIiLDqzZBAezn3DvKhVRTiGxdvtNNZ_fL5_qJ5IRBDzch1wusHMEATJCi2Xn4IcjPwhjBLE4YtVY3yF7dk6iZcx2tSdRGHXwlKQxN99lCQ27yKQoHQ4w3l5yIqHtkShNzkt1TbV-ifhg60yHjMYWDVwLuJn46grsi16B1W1l6KBfnQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-<p class="text-white text-xs font-bold uppercase tracking-widest mb-1">BBA Marketing, 2025</p>
-<p class="text-secondary-container text-xs font-medium italic">"Driving fiscal excellence."</p>
-</div>
-</div>
-<h4 class="font-extrabold text-primary text-xl">Marcus Thorne</h4>
-<p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Director of Finance</p>
-</div>
-<!-- Team Member 2 -->
-<div class="group cursor-pointer">
-<div class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
-<img alt="Elena Rodriguez" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6CSrzWZsQ-c4ww8dWKazrtfYybOn4fjQ21kCc4lPdIoEtnjlh27meQ9umIGbQv9X81q8QUDOFg9ExgOcSDEL99DRyxkkz9dNoyLbM3Y8S_l-iMQsg4p_imYCHeHn9Y-qRnS2pmvizri0ZbOqXLSMAq9mZtCrqo-FJIahQVM_DGSvYDUrVlxtc5Ry3Q7oYJDvPDmj103x6JMb7H71heVGoLHXnqDexsTSesJFyGidskapP0RZ1nE9j2O2RAWnr-0-7ZwlE2TWSnA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-<p class="text-white text-xs font-bold uppercase tracking-widest mb-1">BBA Finance, 2024</p>
-<p class="text-secondary-container text-xs font-medium italic">"Connecting talent with opportunity."</p>
-</div>
-</div>
-<h4 class="font-extrabold text-primary text-xl">Elena Rodriguez</h4>
-<p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Corporate Relations</p>
-</div>
-<!-- Team Member 3 -->
-<div class="group cursor-pointer">
-<div class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
-<img alt="David Park" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyjottxF2hxTssCNUuYBM7Hyv_FoRU9H2y1xiUxv07FLki-RZcfum_WglyFMuxqK4zs2K1erT-xKzbdnYZuqml9NwK0-x1C1RGYRJREhMg_TH7b9ce4GXxQ1iMikjlQAFfKxynKGWK2wtNNRjiLveE5btG9SOYoF6EEOiBp4pa_RbgN_Uze5Xp7yJTlR1xa4DF1PJUIP4qg3pZSv_f1soMlEccEPDdAdw6aRLyyOnIq7kyPjLnPe6qA5b3-HEn-toiqVxJYUuCog"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-<p class="text-white text-xs font-bold uppercase tracking-widest mb-1">Strategic Comms, 2025</p>
-<p class="text-secondary-container text-xs font-medium italic">"Amplifying our message."</p>
-</div>
-</div>
-<h4 class="font-extrabold text-primary text-xl">David Park</h4>
-<p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Marketing Lead</p>
-</div>
-<!-- Team Member 4 -->
-<div class="group cursor-pointer">
-<div class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
-<img alt="Sofia Müller" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHftfD9bzesAU9bemMnUZ92Muqv3qTkuvNJ8GW7LtqusAL8yjxy_Tjh0oHzDhoR3KwHQwxm_4OsMpjzyGAwLS1whnqkpujGMIkZE4JxjCq0m2cy2fUO07PRIOW23TFn7kASoJbPpg74yxh26gI0RuBNCoursYmFkzis7dyAIUWVIbmwpbW6u_hSRmzaab3UaWhOj3BnXluZtBBZxwrBwi4BxD34iDATXb7MDAnloIetRcyLRS6a1Xi_ed_TGhuIjVjJNw1rp23Ww"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-<p class="text-white text-xs font-bold uppercase tracking-widest mb-1">International Business, 2026</p>
-<p class="text-secondary-container text-xs font-medium italic">"Creating memorable experiences."</p>
-</div>
-</div>
-<h4 class="font-extrabold text-primary text-xl">Sofia Müller</h4>
-<p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Events Coordinator</p>
-</div>
-</div>
-<!-- The "Boardroom" Stat-Hero -->
-<section class="mt-32 p-16 bg-primary rounded-3xl text-center relative overflow-hidden shadow-2xl">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
-<div class="space-y-2">
-<p class="text-7xl font-extrabold text-secondary-container tracking-tighter">100%</p>
-<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">Placement Rate</p>
-</div>
-<div class="space-y-2">
-<p class="text-7xl font-extrabold text-secondary-container tracking-tighter">12</p>
-<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">Fortune 500 Partners</p>
-</div>
-<div class="space-y-2">
-<p class="text-7xl font-extrabold text-secondary-container tracking-tighter">4</p>
-<p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">National Titles</p>
-</div>
-</div>
-<!-- Decor -->
-<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/5 rounded-full -mr-32 -mt-32"></div>
-<div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-16 border-t border-surface-variant/30 bg-white">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
-<div class="flex items-center gap-4">
-<img alt="UMD Logo" class="h-12 w-auto grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ughukBojUmNlLhmNj7r-zdAGBL_S1GpDl_b7kSmRtBgqucuHcNUFq45Ls426unSzPK4WL-p38gLeJAM804Lz3p9NG8RLR2L_KKiiphVdDa4fmmzBwRQTX7nZL_bzgcsRE5awMgt413gWplGLCaSvWYAu4IpflYPrigLCn9ciDHd-1jnBIEoR-hqQA1gLGpvQj9zGk-IsEPPfcGkvnFGJKldBDD7tmrcmMUXjQyhUaqKucON8co7jVIko3mUMiODQu-2OKfPDrc8"/>
-<div class="flex flex-col">
-<span class="text-lg font-extrabold text-primary leading-none">The Boardroom</span>
-<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Editorial Team</span>
-</div>
-</div>
-<p class="font-['Manrope'] text-xs font-semibold uppercase tracking-[0.1em] text-stone-400">© 2024 The Boardroom Editorial. University of Minnesota Duluth Sales Club.</p>
-<div class="flex gap-8 font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.2em]">
-<a class="text-stone-500 hover:text-primary transition-colors" href="#">LinkedIn</a>
-<a class="text-stone-500 hover:text-primary transition-colors" href="#">Instagram</a>
-<a class="text-stone-500 hover:text-primary transition-colors" href="#">Privacy</a>
-</div>
-</div>
-</footer>
-</body></html>
+                <p class="text-on-surface-variant font-medium pl-16">The functional architects behind our weekly sales
+                    workshops and national competitions at UMD.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="group cursor-pointer">
+                <div
+                    class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
+                    <img alt="Marcus Thorne"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqgRnjRtFMG2aD7Pk8gcyjB1DFjS6m_x73EoM7afG03q_OnxxqGZXT1QemCb0uqPRQ7acslU6dz2lVZUh0gsc3FccdEeT6WIiLDqzZBAezn3DvKhVRTiGxdvtNNZ_fL5_qJ5IRBDzch1wusHMEATJCi2Xn4IcjPwhjBLE4YtVY3yF7dk6iZcx2tSdRGHXwlKQxN99lCQ27yKQoHQ4w3l5yIqHtkShNzkt1TbV-ifhg60yHjMYWDVwLuJn46grsi16B1W1l6KBfnQ" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-white text-xs font-bold uppercase tracking-widest mb-1">BBA Marketing, 2025</p>
+                        <p class="text-secondary-container text-xs font-medium italic">"Driving fiscal excellence."</p>
+                    </div>
+                </div>
+                <h4 class="font-extrabold text-primary text-xl">Marcus Thorne</h4>
+                <p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Director of
+                    Finance</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="group cursor-pointer">
+                <div
+                    class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
+                    <img alt="Elena Rodriguez"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6CSrzWZsQ-c4ww8dWKazrtfYybOn4fjQ21kCc4lPdIoEtnjlh27meQ9umIGbQv9X81q8QUDOFg9ExgOcSDEL99DRyxkkz9dNoyLbM3Y8S_l-iMQsg4p_imYCHeHn9Y-qRnS2pmvizri0ZbOqXLSMAq9mZtCrqo-FJIahQVM_DGSvYDUrVlxtc5Ry3Q7oYJDvPDmj103x6JMb7H71heVGoLHXnqDexsTSesJFyGidskapP0RZ1nE9j2O2RAWnr-0-7ZwlE2TWSnA" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-white text-xs font-bold uppercase tracking-widest mb-1">BBA Finance, 2024</p>
+                        <p class="text-secondary-container text-xs font-medium italic">"Connecting talent with
+                            opportunity."</p>
+                    </div>
+                </div>
+                <h4 class="font-extrabold text-primary text-xl">Elena Rodriguez</h4>
+                <p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Corporate
+                    Relations</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="group cursor-pointer">
+                <div
+                    class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
+                    <img alt="David Park"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyjottxF2hxTssCNUuYBM7Hyv_FoRU9H2y1xiUxv07FLki-RZcfum_WglyFMuxqK4zs2K1erT-xKzbdnYZuqml9NwK0-x1C1RGYRJREhMg_TH7b9ce4GXxQ1iMikjlQAFfKxynKGWK2wtNNRjiLveE5btG9SOYoF6EEOiBp4pa_RbgN_Uze5Xp7yJTlR1xa4DF1PJUIP4qg3pZSv_f1soMlEccEPDdAdw6aRLyyOnIq7kyPjLnPe6qA5b3-HEn-toiqVxJYUuCog" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-white text-xs font-bold uppercase tracking-widest mb-1">Strategic Comms, 2025</p>
+                        <p class="text-secondary-container text-xs font-medium italic">"Amplifying our message."</p>
+                    </div>
+                </div>
+                <h4 class="font-extrabold text-primary text-xl">David Park</h4>
+                <p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Marketing Lead
+                </p>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="group cursor-pointer">
+                <div
+                    class="bg-surface-container-highest aspect-[4/5] rounded-xl overflow-hidden mb-5 relative shadow-md">
+                    <img alt="Sofia Müller"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHftfD9bzesAU9bemMnUZ92Muqv3qTkuvNJ8GW7LtqusAL8yjxy_Tjh0oHzDhoR3KwHQwxm_4OsMpjzyGAwLS1whnqkpujGMIkZE4JxjCq0m2cy2fUO07PRIOW23TFn7kASoJbPpg74yxh26gI0RuBNCoursYmFkzis7dyAIUWVIbmwpbW6u_hSRmzaab3UaWhOj3BnXluZtBBZxwrBwi4BxD34iDATXb7MDAnloIetRcyLRS6a1Xi_ed_TGhuIjVjJNw1rp23Ww" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <p class="text-white text-xs font-bold uppercase tracking-widest mb-1">International Business,
+                            2026</p>
+                        <p class="text-secondary-container text-xs font-medium italic">"Creating memorable experiences."
+                        </p>
+                    </div>
+                </div>
+                <h4 class="font-extrabold text-primary text-xl">Sofia Müller</h4>
+                <p class="text-on-surface-variant font-bold text-[10px] uppercase tracking-[0.2em] mt-1">Events
+                    Coordinator</p>
+            </div>
+        </div>
+        <!-- The "Boardroom" Stat-Hero -->
+        <section class="mt-32 p-16 bg-primary rounded-3xl text-center relative overflow-hidden shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                <div class="space-y-2">
+                    <p class="text-7xl font-extrabold text-secondary-container tracking-tighter">100%</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">Placement Rate</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-7xl font-extrabold text-secondary-container tracking-tighter">12</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">Fortune 500 Partners</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-7xl font-extrabold text-secondary-container tracking-tighter">4</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">National Titles</p>
+                </div>
+            </div>
+            <!-- Decor -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/5 rounded-full -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-16 border-t border-surface-variant/30 bg-white">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+            <div class="flex items-center gap-4">
+                <img alt="UMD SalesClub Logo" class="h-12 w-auto grayscale contrast-125" src="SalesClubLogo.jpg" />
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold text-primary leading-none">The Boardroom</span>
+                    <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Editorial
+                        Team</span>
+                </div>
+            </div>
+            <p class="font-['Manrope'] text-xs font-semibold uppercase tracking-[0.1em] text-stone-400">© 2024 The
+                Boardroom Editorial. University of Minnesota Duluth Sales Club.</p>
+            <div class="flex gap-8 font-['Manrope'] text-[10px] font-bold uppercase tracking-[0.2em]">
+                <a class="text-stone-500 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                <a class="text-stone-500 hover:text-primary transition-colors"
+                    href="https://www.instagram.com/umdsalesclub/">Instagram</a>
+                <a class="text-stone-500 hover:text-primary transition-colors" href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
